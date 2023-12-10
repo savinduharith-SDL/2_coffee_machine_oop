@@ -15,6 +15,5 @@ while True:
     elif choice == "off":
         break
     menuItem = menu.find_drink(choice)
-    if coffee_maker.is_resource_sufficient(menuItem):
-        if money_machine.make_payment(menuItem.cost):
+    if coffee_maker.is_resource_sufficient(menuItem) and money_machine.make_payment(menuItem.cost):
             coffee_maker.make_coffee(menuItem)
